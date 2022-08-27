@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.album_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.album_users {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.aditional_text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 24px;
+  font-weight: 500;
+  align-self: flex-end;
+}
+
+.group_avatars {
+  margin-top: -20rem;
+}

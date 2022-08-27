@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.7rem;
+  width: 100%;
+}
+.bottom_section {
+  display: flex;
+  justify-content: space-between;
+  height: 15%;
+  padding: 1rem 0;
+}
