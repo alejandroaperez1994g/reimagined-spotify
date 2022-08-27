@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import AppLayout from '../components/AppLayout';
+import MainSection from '../components/MainSection';
+import MainSectionLayout from '../components/MainSectionLayout';
 import Navbar from '../components/Navbar';
+import Sidebar from '../components/Sidebar';
 
 import styles from '../styles/Home.module.css';
 
@@ -13,7 +16,11 @@ export default function Home() {
         <link rel="icon" href="/spotify-logo.ico" />
       </Head>
       <AppLayout>
-        <Navbar />
+        <Sidebar />
+        <MainSectionLayout>
+          <Navbar />
+          <MainSection />
+        </MainSectionLayout>
         <main></main>
       </AppLayout>
     </div>
