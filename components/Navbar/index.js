@@ -1,55 +1,30 @@
 import Image from 'next/image';
-import Button from '@mui/material/Button';
+import Link from 'next/link';
+import Widget from '../Widget';
 import styles from './styles.module.css';
 
 const Navbar = () => {
   return (
-    <div className={styles.navbar}>
-      <div className={styles.logo}>
+    <div className={styles.navbar__container}>
+      <div className={styles.navigation__arrows}>
         <Image
-          src="https://i.ibb.co/GxXwBpS/spotify-logo.png"
-          alt="logo"
-          width={41}
-          height={40}
+          src="/icons/left-arrow.png"
+          alt="arrow-left"
+          width={28}
+          height={28}
+          layout="fixed"
+        />
+        <Image
+          src="/icons/right-arrow.png"
+          alt="arrow-left"
+          width={28}
+          height={28}
           layout="fixed"
         />
       </div>
-      <div className={styles.nav__items}>
-        <Image
-          src="/icons/search.png"
-          alt="logo"
-          width={40}
-          height={40}
-          layout="fixed"
-        />
-        <Image
-          src="/icons/disc.png"
-          alt="logo"
-          width={40}
-          height={40}
-          layout="fixed"
-        />
-        <Image
-          src="/icons/mic.png"
-          alt="logo"
-          width={40}
-          height={40}
-          layout="fixed"
-        />
-        <Image
-          src="/icons/dj.png"
-          alt="logo"
-          width={40}
-          height={40}
-          layout="fixed"
-        />
-        <Image
-          src="/icons/album.png"
-          alt="logo"
-          width={40}
-          height={40}
-          layout="fixed"
-        />
+      <div className={styles.widgets__wrapper}>
+        <Widget title="Daft Punk Album Streaming" type="Event" />
+        <Widget title="Remote Play" type="Party" icon="dj.png" />
       </div>
     </div>
   );

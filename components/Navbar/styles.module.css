@@ -1,19 +1,26 @@
-.navbar {
+.navbar__container {
   align-items: center;
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  gap: 2rem;
+  height: 10%;
   justify-content: flex-start;
-  padding: 3rem 1rem;
-  width: 9rem;
+  margin-bottom: 2rem;
 }
 
-.logo {
-  margin-bottom: 5rem;
-}
-
-.nav__items {
+.navigation__arrows {
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
+}
+
+.widgets__wrapper {
+  display: grid;
+  gap: 0.5rem;
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.widgets__wrapper::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }

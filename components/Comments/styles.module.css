@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  width: 48%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+}
+
+.comments {
+  display: flex;
+  height: 100%;
+  width: 80%;
+  word-wrap: break-word;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.comments::-webkit-scrollbar {
+  display: none;
+}

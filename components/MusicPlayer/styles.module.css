@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  width: 48%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+}
+
+.album_image {
+  border-radius: 10px;
+}
+
+.player_info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.current_song {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.artist_info {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+}

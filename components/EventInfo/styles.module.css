@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.event_type {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.event_title {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+}
+
+.avatar_group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.invite_button {
+  background-color: #1dd662;
+  border: none;
+  color: black;
+  font-weight: 600;
+  border-radius: 3rem;
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: all 0.5 ease-in-out;
+}
+.invite_button:hover {
+  background-color: #1dd662;
+  transform: scale(1.05);
+}
+
+.avatar {
+  cursor: pointer;
+}
+
+.total_listening {
+  font-size: 20px;
+  font-weight: 500;
+}

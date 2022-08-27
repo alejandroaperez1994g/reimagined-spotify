@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.event_album_picture {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 20px;
+}
+
+.album_title {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.album_artist,
+.album_description {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+}
