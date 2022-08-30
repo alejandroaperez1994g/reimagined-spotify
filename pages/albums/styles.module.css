@@ -1,0 +1,12 @@
+.container {
+  padding: 0 2rem;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: black;
+}
+
+.banner {
+  /* border: 6px solid red !important; */
+  width: 100% !important;
+}
