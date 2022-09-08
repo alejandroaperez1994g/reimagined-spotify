@@ -1,0 +1,119 @@
+.details_container {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.album_info_wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  gap: 1.5rem;
+  background: rgba(14, 4, 4, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.artist_image {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.songs_container {
+  flex: 1;
+}
+
+.artist_name {
+  font-size: 450%;
+  word-wrap: break-word;
+  text-shadow: 0 0 15px #775632;
+}
+
+.followers {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.album_wrapper {
+  display: flex;
+  align-items: center;
+  height: 13%;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  padding: 0.3rem 0;
+}
+.album_info {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.album_picture {
+  border-radius: 10px;
+}
+.album_name {
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.album_artist {
+  color: var(--secondary-text-color);
+}
+
+.tracks_wrapper_title {
+  margin-top: 1.5rem;
+}
+
+.tracks_wrapper {
+  height: 70%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.tracks_wrapper::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.track_row {
+  display: flex;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+
+.track_row:hover {
+  cursor: pointer;
+  color: #1dd662;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.row_title {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  font-size: large;
+  text-shadow: 0 0 15px #775632;
+}
+
+.row_time {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.sound_icon {
+  margin-left: 0.5rem;
+  color: #1dd662;
+}

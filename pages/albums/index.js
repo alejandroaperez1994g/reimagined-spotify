@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 import AppLayout from '../../components/AppLayout';
 import Sidebar from '../../components/Sidebar';
 import MainSectionLayout from '../../components/MainSectionLayout';
@@ -7,14 +8,13 @@ import CentralLayout from '../../components/CentralLayout';
 import AlbumsContainer from '../../components/AlbumsContainer';
 import getAccesToken from '../../services/getAccesToken';
 import getNewReleases from '../../services/getNewReleases';
-
-import styles from './styles.module.css';
-import Image from 'next/image';
 import Banner from '../../components/Banner';
 
+import styles from './styles.module.css';
+
 const Albums = ({ items }) => {
-  const randomAlbum = items[Math.floor(Math.random() * 25) + 1];
-  console.log(randomAlbum);
+  // const rndN = Math.floor(Math.random() * 25);
+  let randomAlbum = items[10];
   return (
     <div className={styles.container}>
       <Head>
@@ -31,7 +31,9 @@ const Albums = ({ items }) => {
               albumImage={randomAlbum.images[0].url}
               title={randomAlbum.name}
               artist={randomAlbum.artists[0].name}
+              id={randomAlbum.id}
             />
+
             <AlbumsContainer albums={items} />
           </CentralLayout>
         </MainSectionLayout>
@@ -40,9 +42,10 @@ const Albums = ({ items }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { access_token, token_type } = await getAccesToken();
   const albumsData = await getNewReleases(token_type, access_token);
+
   return {
     props: albumsData.albums, // will be passed to the page component as props
   };
