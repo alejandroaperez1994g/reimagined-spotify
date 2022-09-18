@@ -14,8 +14,9 @@
 }
 
 .album_picture {
-  width: 7rem;
+  width: 10rem;
   height: 7rem;
+  z-index: -1;
 }
 
 .album {
@@ -29,6 +30,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   width: 80%;
+  text-shadow: 0 0 15px #775632;
 }
 
 .album_title:hover {
@@ -39,5 +41,5 @@
 .artist_name {
   font-size: 12px;
   font-weight: 500;
-  color: black;
+  text-shadow: 0 0 15px #775632;
 }

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
+
 
 import AppLayout from '../../components/AppLayout'
 import Sidebar from '../../components/Sidebar'
@@ -9,7 +9,7 @@ import Navbar from '../../components/Navbar'
 import CentralLayout from '../../components/CentralLayout'
 import AlbumDetails from '../../components/AlbumDetails'
 import getAlbumInfo from '../../services/getAlbumInfo'
-import getAccesToken from '../../services/getAccesToken'
+
 import getNewReleases from '../../services/getNewReleases'
 
 import getAlbumTracks from '../../services/getAlbumTracks'

@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const authOptions = {
   method: 'get',
-  url: 'https://api.spotify.com/v1/browse/new-releases?Country=ES&limit=25',
+  url: 'https://api.spotify.com/v1/browse/new-releases?Country=ES&limit=50',
   headers: {
     Authorization: {}
   }

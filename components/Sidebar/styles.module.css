@@ -10,6 +10,7 @@
 
 .logo {
   margin-bottom: 5rem;
+  cursor: pointer;
 }
 
 .nav__items {

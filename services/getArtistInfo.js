@@ -6,9 +6,7 @@ const requestOptions = {
 }
 
 const getArtistInfo = async (artistID, access_token, token_type) => {
-  // requestOptions.data = {
-  //   artistID: artistID,
-  // };
+  
   requestOptions.data = { artistID, token_type, access_token }
   const response = await axios(requestOptions)
   return response.data

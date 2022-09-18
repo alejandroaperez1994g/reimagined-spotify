@@ -10,6 +10,7 @@
 .navigation__arrows {
   display: flex;
   gap: 1rem;
+  padding: 0.5rem
 }
 
 .widgets__wrapper {
@@ -23,4 +24,14 @@
 
 .widgets__wrapper::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
+}
+
+.navigation_button{
+  transition: all 0.2s ease-in-out;
+}
+
+.navigation_button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  filter: contrast(2);
 }
