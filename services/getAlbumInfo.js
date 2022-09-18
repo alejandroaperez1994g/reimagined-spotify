@@ -1,16 +1,15 @@
-import axios from 'axios';
+import axios from 'axios'
 
 const requestOptions = {
   method: 'post',
-  url: `${process.env.NEXT_PUBLIC_CLIENT_URL}/api/album`,
-};
+  url: `${process.env.NEXT_PUBLIC_CLIENT_URL}/api/album`
+}
 
-const getAlbumInfo = async (albumID) => {
-  requestOptions.data = {
-    albumID: albumID,
-  };
-  const response = await axios(requestOptions);
-  return response.data;
-};
+const getAlbumInfo = async (albumID, access_token, token_type) => {
+  requestOptions.data = { albumID, token_type, access_token }
 
-export default getAlbumInfo;
+  const response = await axios(requestOptions)
+  return response.data
+}
+
+export default getAlbumInfo

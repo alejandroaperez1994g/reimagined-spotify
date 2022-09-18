@@ -1,16 +1,17 @@
-import axios from 'axios';
+import axios from 'axios'
 
 const requestOptions = {
   method: 'post',
-  url: `${process.env.NEXT_PUBLIC_CLIENT_URL}/api/artistInfo`,
-};
+  url: `${process.env.NEXT_PUBLIC_CLIENT_URL}/api/artistInfo`
+}
 
-const getArtistInfo = async (artistID) => {
-  requestOptions.data = {
-    artistID: artistID,
-  };
-  const response = await axios(requestOptions);
-  return response.data;
-};
+const getArtistInfo = async (artistID, access_token, token_type) => {
+  // requestOptions.data = {
+  //   artistID: artistID,
+  // };
+  requestOptions.data = { artistID, token_type, access_token }
+  const response = await axios(requestOptions)
+  return response.data
+}
 
-export default getArtistInfo;
+export default getArtistInfo

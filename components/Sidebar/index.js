@@ -1,16 +1,24 @@
 import Image from 'next/image';
+import {useRouter} from 'next/router';
 
 import styles from './styles.module.css';
 import Link from 'next/link';
 
 const Sidebar = () => {
+const router = useRouter()
+
+
+  const handleNavigation = ({target}) => {
+      router.push(`/${target.alt}`)
+  }
+
   return (
     <div className={styles.navbar}>
       <div className={styles.logo}>
-        <Link href="/">Home</Link>
         <Image
+        onClick={()=>router.push("/")}
           src="https://i.ibb.co/GxXwBpS/spotify-logo.png"
-          alt="logo"
+          alt="home"
           width={41}
           height={40}
           layout="fixed"
@@ -22,22 +30,23 @@ const Sidebar = () => {
         <Image
           className={styles.icon}
           src="/icons/search.png"
-          alt="logo"
+          alt="albums"
           width={40}
           height={40}
           layout="fixed"
         />
-        {/* <Link href="/albums"> */}
+
         <Image
+        onClick={(e)=>handleNavigation(e)}
+        defaultValue="albums"
           className={styles.icon}
           src="/icons/disc.png"
-          alt="logo"
+          alt="albums"
           width={40}
           height={40}
           layout="fixed"
         />
-        <Link href="/albums">Albums</Link>
-        {/* </Link> */}
+
         <Image
           className={styles.icon}
           src="/icons/mic.png"
