@@ -13,8 +13,8 @@ import Banner from '../../components/Banner'
 import styles from './styles.module.css'
 
 const Albums = ({ items }) => {
-  // const rndN = Math.floor(Math.random() * 25);
-  const randomAlbum = items[10]
+  const randomAlbum = items[Math.floor(Math.random() * 25)]
+
   return (
     <div className={styles.container}>
       <Head>
@@ -49,7 +49,8 @@ export async function getStaticProps () {
 
 
   const albumsData = await getNewReleases(token_type, access_token)
-
+  const rndN = Math.floor(Math.random() * 25);
+  albumsData.albums.items.random=rndN
   return {
     props: albumsData.albums // will be passed to the page component as props
   }
