@@ -1,5 +1,6 @@
 .container {
   height: 30%;
+  width: 98%;
   border-radius: 10px;
   overflow: hidden;
   position: relative;

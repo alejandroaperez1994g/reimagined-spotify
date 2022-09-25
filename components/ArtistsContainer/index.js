@@ -4,6 +4,7 @@ import styles from './styles.module.css';
 
 const ArtistsContainer = ({ artists }) => {
   // [0].images[0].url
+
   return (
     <div className={styles.artists_container}>
       <h1 className={styles.title}>Artists</h1>
@@ -14,7 +15,10 @@ const ArtistsContainer = ({ artists }) => {
             <div key={artist.id} className={styles.artist_info}>
               <Image
                 className={styles.artist_image}
-                src={artist.images[0].url}
+                src={
+                  artist.images[0]?.url ||
+                  'https://i.ibb.co/WDfq8z0/usuario.png'
+                }
                 alt="album"
                 width={150}
                 height={150}

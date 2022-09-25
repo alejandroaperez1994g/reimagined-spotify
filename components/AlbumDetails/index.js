@@ -64,11 +64,11 @@ const AlbumDetails = ({ tracks, albumInfo, artistInfo }) => {
                   data_id={track.id}
                 >
                   <p className={styles.row_title}>
-                    {track.name}{' '}
+                    {track.name}
                     {track.name === playing ? (
-                      // <GraphicEqIcon className={styles.sound_icon} />
                       <PauseIcon />
                     ) : (
+                      // <GraphicEqIcon className={styles.sound_icon} />
                       ''
                     )}
                   </p>

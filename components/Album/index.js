@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './styles.module.css';
+import { useRouter } from 'next/router';
 
 const Album = ({ album }) => {
+  const router = useRouter();
+
   return (
     <>
       <div className={styles.card}>
@@ -17,7 +20,10 @@ const Album = ({ album }) => {
           />
         </div>
 
-        <Link href={`/album/${album.id}`}>
+        <Link
+          href={router.asPath === '/search' ? '#' : `/album/${album.id}`}
+          shallow={true}
+        >
           <p className={styles.album_title}>{album.name}</p>
         </Link>
 

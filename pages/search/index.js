@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import {
   AppLayout,
@@ -16,13 +16,32 @@ import styles from './styles.module.css';
 
 const Search = ({ access_token, token_type }) => {
   const [searchData, setSearchData] = useState({});
-  const [searchValue, setSearchvalue] = useState('');
+  const [searchValue, setSearchValue] = useState('');
+  const [lastQuery, setLastQuery] = useState('');
 
   const handleSearch = async (e) => {
     e.preventDefault();
     const result = await getSearch(token_type, access_token, searchValue);
     setSearchData(result);
-    setSearchvalue('');
+    saveQuery();
+    setSearchValue('');
+    setLastQuery(searchValue);
+  };
+
+  const saveQuery = () => {
+    localStorage.setItem('last_query', searchValue);
+  };
+
+  useEffect(() => {
+    getLastQuery();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const getLastQuery = async () => {
+    const last_query = localStorage.getItem('last_query');
+    setLastQuery(last_query);
+    const result = await getSearch(token_type, access_token, last_query);
+    setSearchData(result);
   };
 
   return (
@@ -37,6 +56,7 @@ const Search = ({ access_token, token_type }) => {
         <MainSectionLayout>
           <Navbar />
           <CentralLayout>
+            {searchData.artists && <h1>Top results: {lastQuery} </h1>}
             <div className={styles.group}>
               <svg
                 className={styles.icon}
@@ -53,7 +73,7 @@ const Search = ({ access_token, token_type }) => {
                   type="search"
                   className={styles.input_field}
                   value={searchValue}
-                  onChange={(e) => setSearchvalue(e.target.value)}
+                  onChange={(e) => setSearchValue(e.target.value)}
                 />
               </form>
             </div>
