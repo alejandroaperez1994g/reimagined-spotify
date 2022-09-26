@@ -27,3 +27,10 @@
   cursor: pointer;
   transform: scale(1.1);
 }
+
+.icon_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 0 0 15px #775632;
+}

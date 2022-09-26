@@ -25,36 +25,45 @@ const Sidebar = () => {
         {/* </Link> */}
       </div>
       <div className={styles.nav__items}>
-        <Image
-          onClick={(e) => handleNavigation(e)}
-          className={styles.icon}
-          src="/icons/search.png"
-          alt="search"
-          width={40}
-          height={40}
-          layout="fixed"
-        />
+        <div className={styles.icon_menu}>
+          <Image
+            onClick={(e) => handleNavigation(e)}
+            className={styles.icon}
+            src="/icons/search.png"
+            alt="search"
+            width={40}
+            height={40}
+            layout="fixed"
+          />
+          <p>Search</p>
+        </div>
 
-        <Image
-          onClick={(e) => handleNavigation(e)}
-          defaultValue="albums"
-          className={styles.icon}
-          src="/icons/disc.png"
-          alt="albums"
-          width={40}
-          height={40}
-          layout="fixed"
-        />
+        <div className={styles.icon_menu}>
+          <Image
+            onClick={(e) => handleNavigation(e)}
+            defaultValue="albums"
+            className={styles.icon}
+            src="/icons/disc.png"
+            alt="albums"
+            width={40}
+            height={40}
+            layout="fixed"
+          />
+          <p>Albums</p>
+        </div>
 
-        <Image
-          className={styles.icon}
-          src="/icons/mic.png"
-          alt="logo"
-          width={40}
-          height={40}
-          layout="fixed"
-        />
-        <Image
+        <div className={styles.icon_menu}>
+          <Image
+            className={styles.icon}
+            src="/icons/mic.png"
+            alt="logo"
+            width={40}
+            height={40}
+            layout="fixed"
+          />
+          <p>Podcasts</p>
+        </div>
+        {/* <Image
           className={styles.icon}
           src="/icons/dj.png"
           alt="logo"
@@ -69,7 +78,7 @@ const Sidebar = () => {
           width={40}
           height={40}
           layout="fixed"
-        />
+        /> */}
       </div>
     </div>
   );

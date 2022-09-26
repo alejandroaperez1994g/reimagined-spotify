@@ -14,7 +14,6 @@ import styles from './styles.module.css';
 
 const Albums = ({ items }) => {
   const randomAlbum = items[Math.floor(Math.random() * 25)];
-
   return (
     <div className={styles.container}>
       <Head>

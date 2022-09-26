@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import styles from './styles.module.css';
 
@@ -24,7 +25,9 @@ const ArtistsContainer = ({ artists }) => {
                 height={150}
                 layout="intrinsic"
               />
-              <p>{artist.name}</p>
+              <Link href={`artist/${artist.id}`}>
+                <p>{artist.name}</p>
+              </Link>
             </div>
           );
         })}
