@@ -1,8 +1,9 @@
 .app__container {
   display: flex;
-  height: 90%;
-  width: 90%;
-  /* max-width: 1490px; */
+  /* height: 80%; */
+  height: 880px;
+  /* width: 80%; */
+  width: 1490px;
   border: 2px solid #775632;
   border-radius: 32px;
   background-image: url('https://i.ibb.co/zbXTdYJ/background-1.png');

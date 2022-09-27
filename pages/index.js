@@ -30,15 +30,15 @@ export default function Home({ access_token, token_type }) {
   );
 }
 
-// export async function getStaticProps() {
-//   const fs = require('fs');
-//   const credentials = await getAccesToken();
-//   fs.writeFileSync(
-//     './cache/cache_credentials.json',
-//     JSON.stringify(credentials)
-//   );
+export async function getStaticProps() {
+  const fs = require('fs');
+  const credentials = await getAccesToken();
+  fs.writeFileSync(
+    './cache/cache_credentials.json',
+    JSON.stringify(credentials)
+  );
 
-//   return {
-//     props: credentials,
-//   };
-// }
+  return {
+    props: credentials,
+  };
+}

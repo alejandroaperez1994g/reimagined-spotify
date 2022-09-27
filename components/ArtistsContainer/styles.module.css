@@ -35,3 +35,8 @@
 .artist_image {
   border-radius: 50%;
 }
+
+.artist_name:hover {
+  cursor: pointer;
+  font-weight: 500;
+}

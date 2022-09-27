@@ -26,7 +26,7 @@ const ArtistsContainer = ({ artists }) => {
                 layout="intrinsic"
               />
               <Link href={`artist/${artist.id}`}>
-                <p>{artist.name}</p>
+                <p className={styles.artist_name}>{artist.name}</p>
               </Link>
             </div>
           );
