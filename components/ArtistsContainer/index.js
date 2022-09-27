@@ -5,10 +5,17 @@ import styles from './styles.module.css';
 
 const ArtistsContainer = ({ artists }) => {
   // [0].images[0].url
-
+  console.log(artists.length);
   return (
-    <div className={styles.artists_container}>
-      <h1 className={styles.title}>Artists</h1>
+    <div
+      className={
+        artists.length > 0
+          ? styles.artists_container
+          : styles.artists_without_artists
+      }
+    >
+      {artists.length > 0 && <h1 className={styles.title}>Artists</h1>}
+
       {/* only 6 artist */}
       <div className={styles.artists_image_wrapper}>
         {artists.slice(0, 10).map((artist) => {
