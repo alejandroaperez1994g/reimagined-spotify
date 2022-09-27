@@ -10,3 +10,8 @@
   /* border: 6px solid red !important; */
   width: 100% !important;
 }
+.title {
+  align-self: flex-start;
+  margin-left: 1rem;
+  font-size: 2rem;
+}

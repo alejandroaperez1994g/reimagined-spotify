@@ -11,7 +11,7 @@ const ArtistsContainer = ({ artists }) => {
       <h1 className={styles.title}>Artists</h1>
       {/* only 6 artist */}
       <div className={styles.artists_image_wrapper}>
-        {artists.slice(0, 7).map((artist) => {
+        {artists.slice(0, 10).map((artist) => {
           return (
             <div key={artist.id} className={styles.artist_info}>
               <Image

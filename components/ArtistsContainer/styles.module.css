@@ -1,21 +1,27 @@
 .artists_container {
   display: flex;
-  height: 40%;
+  height: 44%;
+  width: 100%;
   flex-direction: column;
   align-items: center;
 }
 
 .title {
   font-size: xx-large;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
 }
+
 .artists_image_wrapper {
-  display: grid;
-  margin-top: 0.5rem;
-  gap: 0.5rem;
-  grid-auto-columns: max-content;
-  grid-auto-flow: column;
   overflow-x: auto;
-  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+  display: grid;
+  grid-gap: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(100% - 70rem);
+}
+.artists_image_wrapper::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 .artist_info {

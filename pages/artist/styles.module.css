@@ -16,7 +16,7 @@
 .artist_details_container {
   display: flex;
   width: 100%;
-  height: 90%;
+  height: 85%;
   flex-direction: column;
 
   padding: 1rem;
@@ -44,6 +44,7 @@
 .details {
   flex: 1;
   display: flex;
+  margin-bottom: 0.5rem;
 }
 .top_songs {
   flex: 1;

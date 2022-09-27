@@ -26,6 +26,7 @@ const Albums = ({ items }) => {
         <MainSectionLayout>
           <Navbar />
           <CentralLayout>
+            <h1 className={styles.title}>New Releases</h1>
             <Banner
               albumImage={randomAlbum.images[0].url}
               title={randomAlbum.name}

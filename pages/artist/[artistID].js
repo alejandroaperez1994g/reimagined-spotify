@@ -19,7 +19,7 @@ import styles from './styles.module.css';
 const Artist = () => {
   const router = useRouter();
   const [artistInfo, setArtistInfo] = useState({});
-
+  console.log(artistInfo.artistAlbums);
   useEffect(() => {
     const { artistID } = router.query;
     getData(artistID);
@@ -84,8 +84,11 @@ const Artist = () => {
                     <button className={styles.follow_button}>Follow</button>
                   </div>
                 </div>
-
-                <AlbumsContainer albums={artistInfo.artistAlbums} />
+                {artistInfo.artistAlbums === undefined ? (
+                  <AlbumsContainer albums={artistInfo.artistAlbums} />
+                ) : (
+                  <h2>There is no discography of this artist</h2>
+                )}
               </div>
             </div>
           </CentralLayout>

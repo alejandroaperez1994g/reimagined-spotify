@@ -56,7 +56,9 @@ const Search = ({ access_token, token_type }) => {
         <MainSectionLayout>
           <Navbar />
           <CentralLayout>
-            {searchData.artists && <h1>Top results: {lastQuery} </h1>}
+            {searchData.artists && (
+              <h1 className={styles.search_query}>Top results: {lastQuery} </h1>
+            )}
             <div className={styles.group}>
               <svg
                 className={styles.icon}
@@ -84,7 +86,7 @@ const Search = ({ access_token, token_type }) => {
                 <AlbumsContainer albums={searchData.albums.items} />
               </>
             ) : (
-              <h1>No Recent Searches</h1>
+              <h1>No recent searches</h1>
             )}
           </CentralLayout>
         </MainSectionLayout>
